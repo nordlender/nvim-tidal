@@ -1,4 +1,14 @@
 return {
+
+	{
+		"https://codeberg.org/MrReason/tidal.nvim",
+		opts = require "configs.tidal",
+		-- Recommended: Install TreeSitter parsers for Haskell 
+		dependencies = {
+			"nvim-treesitter/nvim-treesitter",
+			opts = { ensure_installed = { "haskell" } },
+		},
+	},
   {
     "stevearc/conform.nvim",
     -- event = 'BufWritePre', -- uncomment for format on save
